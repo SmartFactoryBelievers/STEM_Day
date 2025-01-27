@@ -17,16 +17,9 @@ cam = PiCamera() #setup camera
 filename = "{0:%Y}-{0:%m}-{0:%d}".format(datetime.now())
 #print(str(filename))
 
-#set camera resolution
-cam.resolution = (640, 480)
-
-# Change the rate at which the camera records images
-cam.framerate = 30
-
-# Rotate the image by x degrees
-# Note that the camera assembly is upside down so 180 is right side up
-# For challenge 3, try other rotation angles
-cam.rotation = 90
+cam.resolution = (640, 640)#set camera resolution
+cam.framerate = 30# Change the rate at which the camera records images
+cam.rotation = 90 # Rotate the image by x degrees
 
 #test PIR sensor
 #print("waiting for motion")
@@ -45,7 +38,7 @@ while True:
     sleep(5)
     pir.wait_for_no_motion() #detect lack of motion
     cam.stop_preview() #stop camera when no motion
-    
+    sleep(1)
     '''
     #record motion
     pir.wait_for_motion() #detect motion
