@@ -1,6 +1,6 @@
 REQUIRED PACKAGES:
 	OpenCV-Contrib package (Version 4.5.5.62, LATEST VERSION DOES NOT WORK) -> pip install opencv-contrib-python == 4.5.5.62
-	NumPy 1.26.4 -> pip install numpy==1.26.4
+	NumPy (Version 1.26.4, NumPy 2 DOES NOT WORK) -> pip install numpy==1.26.4
 
 *Before installing packages uninstall any current versions of NumPy and OpenCV. 
 *Opencv-contrib-python cannot be installed with Opencv-python also installed, only have 1 version of OpenCV installed
