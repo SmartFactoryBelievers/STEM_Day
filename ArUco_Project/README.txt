@@ -17,7 +17,7 @@ CALIBRATION:
 	Before running the "calibrate_gen_matrix.py" script there are a couple variables that will need to be modified
 		Change the "SQUARE_SIZE" variable to the measurement of 1 square on your chessboard (in millimeters) 
 		The "calib_data_path" variable is the path where the data generated will be saved
-		The "image_dir_path"variable is where your images are stored, the "Calib_Imgs" folder from the previous step goes here
+		The "image_dir_path" variable is where your images are stored, the "Calib_Imgs" folder from the previous step goes here
 
 EXAMPLES:
 	"ArUcoReader.py" needs to be in the same directory as the project you want to launch
