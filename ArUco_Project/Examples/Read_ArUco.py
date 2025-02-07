@@ -65,10 +65,7 @@ if __name__ == "__main__":
     aruco_detector = ArUcoDetector(cam_mat, dist_coef, marker_size)
 
     def process_marker_data(detector):
-        marker_id = 0  # Replace with the actual marker ID you are interested in
         distance = detector.distance(marker_id)
-        
-
         detected_ids = detector.get_ids()
         print(f"Detected marker IDs: {detected_ids}")
 
