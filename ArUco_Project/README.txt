@@ -26,9 +26,11 @@ EXAMPLES:
 	"Drive_Certain_Distance.py", "Find_And_Drive.py", :Read_ have 2 variable that will need to be modified
 		The "calib_data_path" variable is the same path from the calibration step
 		The "marker_size" variable is the size of the ArUco that will be read, if testing multiple codes print them the same size. This variable is in centimeters
-	"Drive_Certain_Distance.py" just see if a code is in it's camera view and drive forward until it's 10 inches away from the ArUco
+	"Drive_Certain_Distance.py" just sees if a code is in it's camera view and drive forward until it's 10 inches away from the ArUco
 	"Find_And_Drive.py" turns until it identifies a code and then drives toward the ArUco
-	"Read_ArUco.py" just reads ArUco's codes
+	"Read_ArUco.py" just reads ArUco's codes, reccommend using this as a base for any other programs that will interact with the ArUcoReader script
+
+*ArUcoReader script is set to use 6X6 ArUco codes
  
 
 	
