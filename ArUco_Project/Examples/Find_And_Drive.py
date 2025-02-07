@@ -1,7 +1,7 @@
 import RPi.GPIO as GPIO
 import numpy as np
 from ArUcoReader import ArUcoDetector
-from time import sleep
+
 
 
 # Define the GPIO pins
@@ -48,8 +48,8 @@ def backward():
 def turn_left():
     print("Turning Left")
     Left_Forward_PWM.ChangeDutyCycle(0)
-    Left_Backward_PWM.ChangeDutyCycle(50)  # Reduce speed
-    Right_Forward_PWM.ChangeDutyCycle(50)  # Reduce speed
+    Left_Backward_PWM.ChangeDutyCycle(25)  # Reduce speed
+    Right_Forward_PWM.ChangeDutyCycle(25)  # Reduce speed
     Right_Backward_PWM.ChangeDutyCycle(0)
 
 def turn_right():
@@ -93,13 +93,9 @@ if __name__ == "__main__":
         if distance is not None and orientation is not None:
             print(f"Distance to marker {marker_id}: {distance:.2f} cm")
             print(f"Orientation to marker {marker_id}: {orientation:.2f} degrees")
-            if abs(90-abs(orientation)) <= 1 :  # Check if the rover is facing the marker head-on (within 5 degrees)
+            if abs(90-abs(orientation)) <= 1 :  # Check if the rover is facing the marker head-on (within 1 degree)
                 counter += 1
                 stop()
-            #elif orientation > 0:
-            #    turn_left()  # Adjust to the left
-            #elif orientation < 0:
-            #    turn_right()  # Adjust to the right
             if distance >= 25.4 and counter > 0:
                 forward()
             elif distance < 25.4 and counter > 0:
@@ -109,7 +105,6 @@ if __name__ == "__main__":
             turn_right()  # Turn right to search for the marker
             print(counter)
         else:
-            print(f"Marker {marker_id} not detected")
             stop()
 
         detected_ids = detector.get_ids()
