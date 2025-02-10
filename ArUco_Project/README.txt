@@ -23,7 +23,7 @@ EXAMPLES:
 	"ArUcoReader.py" needs to be in the same directory as the project you want to launch
 	Code between the function "process_marker_data" is the loop that should be edited for logic that is reliant on the ArUco tag being read
 	In the "Examples" folder are 2 ArUco tags that can be used (ID 0 and 1), print them for the most consistent read.
-	"Drive_Certain_Distance.py", "Find_And_Drive.py", :Read_ have 2 variable that will need to be modified
+	"Drive_Certain_Distance.py", "Find_And_Drive.py", "Read_ArUco.py" have 2 variable that will need to be modified
 		The "calib_data_path" variable is the same path from the calibration step
 		The "marker_size" variable is the size of the ArUco that will be read, if testing multiple codes print them the same size. This variable is in centimeters
 	"Drive_Certain_Distance.py" just sees if a code is in it's camera view and drive forward until it's 10 inches away from the ArUco
