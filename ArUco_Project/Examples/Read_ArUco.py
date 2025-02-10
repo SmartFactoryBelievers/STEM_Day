@@ -16,7 +16,7 @@ if __name__ == "__main__":
         distance = detector.distance(marker_id)
         detected_ids = detector.get_ids()
         print(f"Detected marker IDs: {detected_ids}")
-
+        print(f"Detected marker distance: {distance}")
     # Start the camera stream with the callback function
     aruco_detector.start_camera_stream(callback=process_marker_data)
 
