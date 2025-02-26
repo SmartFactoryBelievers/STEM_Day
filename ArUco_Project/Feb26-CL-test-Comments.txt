@@ -1,0 +1,14 @@
+# Feb26-CL-test-Comments.txt
+
+1. Love the README! Super easy to follow-along. Only suggestion is to use markdown format instead of TXT for better readability. You can copy the template-project folder from DEV repo into STEM_Day repo and update those templates with the contents of your curerent README.
+
+2. Not sure if you have tested on the rover webcam yet, but calibrate_generate_images was extremely slow/laggy. Was not able to save images by pressing 's'. Code did create the Calib_images directory, but got an error message about not enough memory.
+
+begin calibrate_generate_images.py output:
+>>> %Run calibrate_generate_images.py
+"/home/pi/Desktop/Calib_Imgs" Directory already Exists.
+[ WARN:0] global ../modules/videoio/src/cap_gstreamer.cpp (1824) handleMessage OpenCV | GStreamer warning: Embedded video playback halted; module v4l2src0 reported: Failed to allocate required memory.
+[ WARN:0] global ../modules/videoio/src/cap_gstreamer.cpp (914) open OpenCV | GStreamer warning: unable to start pipeline
+[ WARN:0] global ../modules/videoio/src/cap_gstreamer.cpp (501) isPipelinePlaying OpenCV | GStreamer warning: GStreamer: pipeline have not been created
+
+3. calibrate_gen_matrix gave a matrix of data but got an error message. I am also wondering what is the required precision of the SQUARE_SIZE variable? As you continue to build out the code, think of ways you can simplify the install (think of making the code "plug & play", I know that is a big ask for something this complex)
