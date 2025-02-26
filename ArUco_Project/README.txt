@@ -5,6 +5,7 @@ REQUIRED PACKAGES:
 *Before installing packages uninstall any current versions of NumPy and OpenCV. 
 *Opencv-contrib-python cannot be installed with Opencv-python also installed, only have 1 version of OpenCV installed
 	pip uninstall opencv-python
+	pip uninstall numpy
 
 To install required packages:
 	pip install requirements.txt
